@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Contracts\Validation\Validator;
 
 class ProductRequest extends FormRequest
 {
@@ -26,5 +25,5 @@ class ProductRequest extends FormRequest
             'name' => 'required|max:100',
             'price' => 'required|numeric',
         ];
-    }
+    }   
 }

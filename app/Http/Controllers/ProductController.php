@@ -19,7 +19,7 @@ class ProductController extends Controller
     }
 
     public function index(Request $request) {
-        $products = Product::paginate($request->perpage, ['*'], 'page', $request->page);
+        $products = Product::orderBy('id', 'DESC')->paginate($request->perpage, ['*'], 'page', $request->page);
         return $products;
     }
 }
